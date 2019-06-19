@@ -35,15 +35,10 @@ class Triangle
         for($rowIndex=0;$rowIndex<$totalRows;$rowIndex++) {
             $numberOfLeadingSpaces = $this->leadingSpaces($totalRows, $rowIndex);
             $numbersPerRow = $this->numbersPerRow($rowIndex);
-            for($z=0;$z<$numberOfLeadingSpaces;$z++) {
-                $output .= " ";
-            }
+            $output .= str_pad("", $numberOfLeadingSpaces * 3, " ", STR_PAD_BOTH);
             for($columnIndex=0;$columnIndex<$numbersPerRow;$columnIndex++) {
                 $calculate = $this->calculate($columnIndex, $data);
-                if($columnIndex > 0) {
-                    $output .= " ";
-                }
-                $output .= $calculate;
+                $output .= str_pad($calculate, 7, " ", STR_PAD_BOTH);
                 $dataLoop[$columnIndex] = $calculate;
             }
             $data[$rowIndex] = $dataLoop;
