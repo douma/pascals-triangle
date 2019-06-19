@@ -1,0 +1,17 @@
+{
+    "name": "douma/pascals-triangle",
+    "authors": [
+        {
+            "name": "Stefan Douma",
+            "email": "douma@live.nl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PascalsTriangle\\": "src"
+        }
+    },
+    "require": {
+        "phpunit/phpunit": "^8.2"
+    }
+}
