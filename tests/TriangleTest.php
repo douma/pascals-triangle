@@ -60,5 +60,16 @@ final class TriangleTest extends TestCase
 ";
 
         $this->assertEquals($output, $triangle->output(5));
+
+        $triangle = new Triangle();
+        $output = "     1
+    1 1
+   1 2 1
+  1 3 3 1
+ 1 4 6 4 1
+1 5 10 10 5 1
+";
+
+        $this->assertEquals($output, $triangle->output(6));
     }
 }
