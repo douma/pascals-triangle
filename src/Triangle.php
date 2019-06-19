@@ -38,7 +38,7 @@ class Triangle
             $output .= str_pad("", $numberOfLeadingSpaces * 3, " ", STR_PAD_BOTH);
             for($columnIndex=0;$columnIndex<$numbersPerRow;$columnIndex++) {
                 $calculate = $this->calculate($columnIndex, $data);
-                $output .= str_pad($calculate, 7, " ", STR_PAD_BOTH);
+                $output .= str_pad($calculate, 6, " ", STR_PAD_BOTH);
                 $dataLoop[$columnIndex] = $calculate;
             }
             $data[$rowIndex] = $dataLoop;
